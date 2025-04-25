@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom Pulse - Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../DASHBOARD/index.html">
+                        <img src="../DASHBOARD/MomPulse LOGO 2.webp" alt="Mom Pulse Logo" class="logo-img" height="50" width="50">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../DASHBOARD/index.html">Dashboard</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Help</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="profile-user.png" alt="Profile Picture" class="profile-pic">
+                    <button class="edit-profile-btn"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="profile-info">
+                    <h1>Sarah Johnson</h1>
+                    <p class="member-since">Member since January 2024</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Articles Read</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Consultations</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Active Groups</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Personal Information -->
+                <section class="profile-section">
+                    <h2>Personal Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Full Name</label>
+                            <p>Sarah Johnson</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p>sarah.johnson@example.com</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone</label>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Due Date</label>
+                            <p>August 15, 2024</p>
+                        </div>
+                    </div>
+                    <button class="edit-btn">Edit Information</button>
+                </section>
+
+                <!-- Health Information -->
+                <section class="profile-section">
+                    <h2>Health Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Blood Type</label>
+                            <p>A+</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Allergies</label>
+                            <p>None</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Medical Conditions</label>
+                            <p>None</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Medications</label>
+                            <p>Prenatal Vitamins</p>
+                        </div>
+                    </div>
+                    <button class="edit-btn">Edit Health Info</button>
+                </section>
+
+                <!-- Preferences -->
+                <section class="profile-section">
+                    <h2>Preferences</h2>
+                    <div class="preferences-grid">
+                        <div class="preference-item">
+                            <label>Notification Settings</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="notifications" checked>
+                                <label for="notifications"></label>
+                            </div>
+                        </div>
+                        <div class="preference-item">
+                            <label>Email Updates</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="email-updates" checked>
+                                <label for="email-updates"></label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="profile-section">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-timeline">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>Read article: "Pregnancy Nutrition Guide"</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>Attended consultation: "Prenatal Care Basics"</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>Joined group: "First-Time Moms Support"</p>
+                                <span class="activity-time">3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,676 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    /* Brand Colors */
+    --primary: #F7C9D6;    /* Soft pastel pink */
+    --secondary: #D9C2FF;  /* Lavender */
+    --accent: #79C2AE;     /* Teal */
+    --background: #FDF6F0; /* Ivory/light beige */
+    --text-dark: #333333;
+    --text-light: #666666;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--primary);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.logo span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+/* Dashboard Styles */
+.dashboard-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.dashboard-title:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.resource-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.resource-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card img {
+    width: 100%;
+    height: 325px;
+    display: block;
+}
+
+.resource-card h3 {
+    padding: 1rem 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Zoom Calls Section */
+.zoom-section {
+    margin-bottom: 2rem;
+}
+
+.zoom-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.zoom-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary);
+}
+
+.zoom-calls {
+    display: flex;
+    gap: 1rem;
+}
+
+.zoom-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.zoom-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--secondary);
+}
+
+.zoom-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zoom-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.zoom-details p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.zoom-today {
+    font-weight: bold;
+    color: var(--accent) !important;
+}
+
+/* Personal Suggestions */
+.suggestions-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.suggestions-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.suggestions-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.suggestion-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.suggestion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.suggestion-card h3 {
+    padding: 1rem 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Custom Background Colors for Cards */
+.card-peach {
+    background-color: var(--primary);
+}
+
+.card-blue {
+    background-color: var(--secondary);
+}
+
+.card-teal {
+    background-color: var(--accent);
+}
+
+.card-beige {
+    background-color: var(--background);
+    border: 1px solid #eee;
+}
+
+.card-cream {
+    background-color: #FFF9F0;
+}
+
+/* Button/CTA Styling */
+.btn {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #68b09d;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .resource-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .suggestions-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .resource-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .suggestions-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .zoom-calls {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .resource-cards {
+        grid-template-columns: 1fr;
+    }
+    .suggestions-cards {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Health Tracking Section */
+.health-tracking-section {
+    margin-bottom: 2rem;
+}
+
+.tracking-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.track-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cycle-info, .timeline-progress {
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 60%;
+    background-color: var(--accent);
+}
+
+.mood-tracker {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.mood-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mood-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.mood-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Emergency Resources */
+.emergency-section {
+    margin-bottom: 2rem;
+}
+
+.emergency-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.emergency-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-list, .symptom-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.contact-list li, .symptom-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.contact-list li::before {
+    content: '📞';
+    position: absolute;
+    left: -0.5rem;
+}
+
+.symptom-list li::before {
+    content: '⚠️';
+    position: absolute;
+    left: -0.5rem;
+}
+
+.contact-number {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* Mental Health Resources */
+.mental-health-section {
+    margin-bottom: 2rem;
+}
+
+.wellbeing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.wellbeing-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.wellbeing-card p {
+    margin: 1rem 0;
+    color: var(--text-light);
+}
+
+.resource-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.resource-btn:hover {
+    background-color: #68b09d;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .tracking-cards,
+    .wellbeing-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tracking-cards,
+    .wellbeing-cards,
+    .emergency-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .mood-options {
+        flex-direction: column;
+    }
+    
+    .mood-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .ai-container {
+        padding: 1rem;
+    }
+    
+    .chat-interface {
+        padding: 0.5rem;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #2d2d2d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .nav-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #ff6b6b;
+}
+
+body.dark-mode .resource-card,
+body.dark-mode .zoom-card,
+body.dark-mode .suggestion-card,
+body.dark-mode .track-card,
+body.dark-mode .emergency-card,
+body.dark-mode .wellbeing-card {
+    background-color: #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .card-peach {
+    background-color: #3d2d2d;
+}
+
+body.dark-mode .card-blue {
+    background-color: #2d2d3d;
+}
+
+body.dark-mode .card-teal {
+    background-color: #2d3d3d;
+}
+
+body.dark-mode .card-beige {
+    background-color: #3d3d2d;
+}
+
+body.dark-mode .card-cream {
+    background-color: #3d3d3d;
+}
+
+body.dark-mode .profile-link img {
+    filter: brightness(0.8);
+}
+
+body.dark-mode .zoom-section,
+body.dark-mode .suggestions-section,
+body.dark-mode .health-tracking-section,
+body.dark-mode .emergency-section,
+body.dark-mode .mental-health-section {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .mood-btn {
+    background-color: #3d3d3d;
+    color: #ffffff;
+}
+
+body.dark-mode .mood-btn:hover {
+    background-color: #4d4d4d;
+}
+
+body.dark-mode .contact-number {
+    color: #ff6b6b;
+}
+
+body.dark-mode .symptom-list li,
+body.dark-mode .contact-list li {
+    color: #ffffff;
+}
+
+body.dark-mode .resource-btn {
+    background-color: #3d3d3d;
+    color: #ffffff;
+}
+
+body.dark-mode .resource-btn:hover {
+    background-color: #4d4d4d;
+}
+
+/* Dark Mode Toggle Switch */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2d2d2d;
+    padding: 10px 15px;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode-toggle span {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggle-switch label:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + label {
+    background-color: #ff6b6b;
+}
+
+.toggle-switch input:checked + label:before {
+    transform: translateX(26px);
+}
