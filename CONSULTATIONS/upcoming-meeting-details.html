@@ -149,18 +149,43 @@
     </main>
 
     <script>
-        // Hide payment section for free meetings
+        // Get meeting type from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const meetingType = urlParams.get('type'); // 'free' or 'paid'
+        const doctorId = urlParams.get('doctor'); // Doctor ID or name
+
+        // Example meeting data - This would typically come from your backend
+        const meetingData = {
+            isFree: meetingType === 'free',
+            title: "Prenatal Nutrition Consultation",
+            description: "Join Dr. Sarah Johnson for an informative group session on prenatal nutrition. Learn essential dietary guidelines, understand nutritional needs during different stages of pregnancy, and get expert answers to your nutrition-related questions.",
+            price: 999,
+            basePrice: 1499,
+            discount: 500,
+            doctorName: doctorId === 'emily' ? "Dr. Emily Parker" : "Dr. Sarah Johnson",
+            doctorTitle: doctorId === 'emily' ? "Mental Health Specialist" : "Certified Nutritionist & Pregnancy Care Specialist",
+            doctorImage: "../DASHBOARD/profile-user.png",
+            keyPoints: [
+                "Essential nutrients for a healthy pregnancy",
+                "Meal planning and portion control",
+                "Foods to avoid during pregnancy",
+                "Managing morning sickness through diet",
+                "Healthy weight gain guidelines"
+            ],
+            sessionDetails: [
+                "Live Q&A session included",
+                "Downloadable nutrition guide",
+                "Meal planning templates",
+                "Recording available for 30 days",
+                "Certificate of completion"
+            ]
+        };
+
+        // Update meeting details when the page loads
         document.addEventListener('DOMContentLoaded', function() {
-            const priceBadge = document.querySelector('.price-badge');
-            const paymentSection = document.getElementById('paymentSection');
-            
-            if (priceBadge && paymentSection) {
-                if (priceBadge.textContent === 'Free') {
-                    paymentSection.style.display = 'none';
-                }
-            }
+            updateMeetingDetails(meetingData);
         });
     </script>
-    <script src="consultations.js"></script>
+    <script src="meeting-details.js"></script>
 </body>
 </html> 
