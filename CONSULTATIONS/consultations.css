@@ -1,0 +1,873 @@
+/* Consultations Page Styles */
+.consultations-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Section Headings */
+.upcoming-meetings h1,
+.past-meetings h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.upcoming-meetings h1:after,
+.past-meetings h2:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+/* Meetings Grid */
+.meetings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Meeting Cards */
+.meeting-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meeting-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.meeting-card.past {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+/* Meeting Date */
+.meeting-date {
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meeting-date.completed {
+    background-color: var(--text-light);
+    color: white;
+}
+
+.meeting-date .date {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.meeting-date .month {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+}
+
+/* Meeting Info */
+.meeting-info {
+    flex: 1;
+}
+
+.meeting-info h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+}
+
+.meeting-info p {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Meeting Actions */
+.meeting-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.join-btn,
+.payment-btn {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.join-btn {
+    background-color: var(--accent);
+    color: white;
+}
+
+.join-btn:hover {
+    background-color: #68b09d;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(105, 176, 157, 0.3);
+}
+
+.payment-btn {
+    background-color: var(--primary);
+    color: var(--text-dark);
+}
+
+.payment-btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .payment-btn {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+body.dark-mode .payment-btn:hover {
+    background-color: #ff5252;
+}
+
+/* Meeting Tags */
+.meeting-tags {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.tag.recording {
+    background-color: var(--primary);
+    color: var(--text-dark);
+}
+
+.tag.slides {
+    background-color: var(--secondary);
+    color: var(--text-dark);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .meeting-card {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .meeting-info h3 {
+    color: white;
+}
+
+body.dark-mode .meeting-info p {
+    color: #aaaaaa;
+}
+
+body.dark-mode .reschedule-btn {
+    background-color: #3d3d3d;
+    color: white;
+}
+
+body.dark-mode .tag {
+    background-color: #3d3d3d;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .meetings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .meeting-card {
+        padding: 1rem;
+    }
+
+    .meeting-actions {
+        flex-direction: column;
+    }
+
+    .join-btn,
+    .payment-btn {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .meeting-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .meeting-date {
+        width: 100px;
+    }
+
+    .meeting-info p {
+        justify-content: center;
+    }
+
+    .meeting-tags {
+        justify-content: center;
+    }
+
+    .join-btn,
+    .payment-btn {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* Consultation Details Page */
+.consultation-details {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.back-link {
+    margin-bottom: 2rem;
+}
+
+.back-link a {
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.back-link a:hover {
+    color: var(--accent);
+}
+
+.consultation-header {
+    margin-bottom: 2rem;
+}
+
+.consultation-title h1 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.consultation-meta {
+    display: flex;
+    gap: 2rem;
+    color: var(--text-light);
+}
+
+.consultation-meta p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Recording Section */
+.recording-section {
+    margin-bottom: 3rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #000;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Summary Section */
+.summary-section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-content h3 {
+    color: var(--text-dark);
+    margin: 1.5rem 0 1rem;
+}
+
+.summary-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.summary-content li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+}
+
+.summary-content li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* Materials Section */
+.materials-section {
+    margin-bottom: 3rem;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.material-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.material-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.material-card span {
+    display: block;
+    font-size: 1rem;
+}
+
+/* Notes Section */
+.notes-section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notes-editor textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.save-notes-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-notes-btn:hover {
+    background-color: #68b09d;
+}
+
+/* Dark Mode Styles for Details Page */
+body.dark-mode .consultation-details {
+    color: white;
+}
+
+body.dark-mode .back-link a {
+    color: white;
+}
+
+body.dark-mode .consultation-title h1 {
+    color: white;
+}
+
+body.dark-mode .summary-section,
+body.dark-mode .material-card,
+body.dark-mode .notes-section {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .summary-content h3 {
+    color: white;
+}
+
+body.dark-mode .summary-content li {
+    color: #aaaaaa;
+}
+
+body.dark-mode .material-card {
+    color: white;
+}
+
+body.dark-mode .notes-editor textarea {
+    background-color: #3d3d3d;
+    border-color: #4d4d4d;
+    color: white;
+}
+
+/* Responsive Design for Details Page */
+@media (max-width: 768px) {
+    .consultation-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .materials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .consultation-title h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Meeting Header with Price */
+.meeting-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.meeting-header h3 {
+    margin-bottom: 0;
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.price-tag,
+.free-tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.price-tag {
+    background-color: var(--primary);
+    color: var(--text-dark);
+}
+
+.free-tag {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* Payment Button */
+.payment-btn {
+    background-color: var(--primary);
+    color: var(--text-dark);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.payment-btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .price-tag {
+    background-color: #3d2d2d;
+    color: white;
+}
+
+body.dark-mode .payment-btn {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+body.dark-mode .payment-btn:hover {
+    background-color: #ff5252;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .meeting-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .price-tag,
+    .free-tag {
+        align-self: flex-start;
+    }
+}
+
+/* Upcoming Meeting Details Page */
+.upcoming-meeting-details {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Meeting Header Large */
+.meeting-header-large {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.meeting-title-section h1 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.price-badge {
+    background-color: var(--primary);
+    color: var(--text-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.meeting-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-light);
+}
+
+.meta-item i {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+/* Meeting Overview */
+.meeting-overview {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-overview h2 {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.meeting-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.key-points,
+.session-details {
+    margin-bottom: 2rem;
+}
+
+.key-points h3,
+.session-details h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.key-points ul,
+.session-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.key-points li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-light);
+}
+
+.key-points li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.session-details li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-light);
+}
+
+.session-details li i {
+    color: var(--accent);
+}
+
+/* Instructor Info */
+.instructor-info {
+    margin-bottom: 2rem;
+}
+
+.instructor-info h3 {
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+
+.instructor-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.instructor-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.instructor-details h4 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.instructor-details p {
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+}
+
+/* Payment Section */
+.payment-section {
+    position: sticky;
+    bottom: 2rem;
+    z-index: 100;
+}
+
+.payment-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.price-details h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.price-breakdown {
+    margin-bottom: 1.5rem;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    color: var(--text-light);
+}
+
+.price-item.discount {
+    color: #ff6b6b;
+}
+
+.price-item.total {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    border-top: 1px solid #eee;
+    padding-top: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.seats-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.payment-btn-large {
+    width: 100%;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.payment-btn-large:hover {
+    background-color: #68b09d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(105, 176, 157, 0.3);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .meeting-header-large,
+body.dark-mode .meeting-overview,
+body.dark-mode .payment-card {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .meeting-title-section h1,
+body.dark-mode .meeting-overview h2,
+body.dark-mode .key-points h3,
+body.dark-mode .session-details h3,
+body.dark-mode .instructor-details h4,
+body.dark-mode .price-details h3 {
+    color: white;
+}
+
+body.dark-mode .meeting-description,
+body.dark-mode .key-points li,
+body.dark-mode .session-details li,
+body.dark-mode .instructor-details p,
+body.dark-mode .price-item {
+    color: #aaaaaa;
+}
+
+body.dark-mode .price-badge {
+    background-color: #3d2d2d;
+    color: white;
+}
+
+body.dark-mode .price-item.total {
+    color: white;
+    border-top-color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .meeting-title-section {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .meeting-meta {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .instructor-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .instructor-details {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .meeting-title-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .payment-card {
+        padding: 1.5rem;
+    }
+}

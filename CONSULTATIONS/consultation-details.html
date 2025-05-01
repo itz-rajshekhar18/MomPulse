@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom Pulse - Consultation Details</title>
+    <link rel="stylesheet" href="consultations.css">
+    <link rel="stylesheet" href="../DASHBOARD/momDashBoard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../DASHBOARD/dashboard.html">
+                        <img src="../DASHBOARD/MomPulse LOGO 2.webp" alt="Mom Pulse Logo" class="logo-img" height="50" width="50">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../DASHBOARD/dashboard.html">Dashboard</a>
+                    <a href="consultations.html">Consultations</a>
+                    <a href="#">Articles & Videos</a>
+                    <a href="../AI_ASSITANT/aiAssistant.html" class="ai-assistant-link">AI Assistant</a>
+                </div>
+                <div class="profile-link">
+                    <a href="../PROFILE/profile.html">
+                        <img src="../DASHBOARD/profile-user.png" alt="Profile" class="profile-img" height="50" width="50">
+                    </a>
+                </div>
+                <div class="logout-link">
+                    <a href="../LOGIN/index.html" class="logout-btn">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="consultation-details">
+            <div class="back-link">
+                <a href="consultations.html"><i class="fas fa-arrow-left"></i> Back to Consultations</a>
+            </div>
+
+            <div class="consultation-header">
+                <div class="consultation-title">
+                    <h1>First Trimester Check-up</h1>
+                    <div class="consultation-meta">
+                        <p class="date"><i class="far fa-calendar"></i> May 10, 2024</p>
+                        <p class="time"><i class="far fa-clock"></i> 11:00 AM - 12:00 PM</p>
+                        <p class="doctor"><i class="fas fa-user-md"></i> Dr. Michael Brown</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="consultation-content">
+                <!-- Recording Section -->
+                <section class="recording-section">
+                    <h2>Consultation Recording</h2>
+                    <div class="video-container">
+                        <video controls>
+                            <source src="path_to_recording.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </section>
+
+                <!-- Summary Section -->
+                <section class="summary-section">
+                    <h2>Consultation Summary</h2>
+                    <div class="summary-content">
+                        <h3>Key Points Discussed</h3>
+                        <ul>
+                            <li>Current health status and vital signs</li>
+                            <li>Dietary recommendations for the first trimester</li>
+                            <li>Common symptoms and management strategies</li>
+                            <li>Exercise guidelines and restrictions</li>
+                            <li>Upcoming tests and screenings</li>
+                        </ul>
+
+                        <h3>Recommendations</h3>
+                        <ul>
+                            <li>Take prescribed prenatal vitamins daily</li>
+                            <li>Maintain regular light exercise routine</li>
+                            <li>Schedule next appointment in 4 weeks</li>
+                            <li>Monitor and record any unusual symptoms</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Materials Section -->
+                <section class="materials-section">
+                    <h2>Additional Materials</h2>
+                    <div class="materials-grid">
+                        <a href="#" class="material-card">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <span>Presentation Slides</span>
+                        </a>
+                        <a href="#" class="material-card">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>First Trimester Guide</span>
+                        </a>
+                        <a href="#" class="material-card">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Diet Plan</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Notes Section -->
+                <section class="notes-section">
+                    <h2>Personal Notes</h2>
+                    <div class="notes-editor">
+                        <textarea placeholder="Add your personal notes about the consultation here..."></textarea>
+                        <button class="save-notes-btn">Save Notes</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="consultations.js"></script>
+</body>
+</html> 

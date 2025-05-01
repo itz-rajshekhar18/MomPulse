@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom Pulse - Upcoming Meeting Details</title>
+    <link rel="stylesheet" href="consultations.css">
+    <link rel="stylesheet" href="../DASHBOARD/momDashBoard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="../DASHBOARD/dashboard.html">
+                        <img src="../DASHBOARD/MomPulse LOGO 2.webp" alt="Mom Pulse Logo" class="logo-img" height="50" width="50">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../DASHBOARD/dashboard.html">Dashboard</a>
+                    <a href="consultations.html">Consultations</a>
+                    <a href="#">Articles & Videos</a>
+                    <a href="../AI_ASSITANT/aiAssistant.html" class="ai-assistant-link">AI Assistant</a>
+                </div>
+                <div class="profile-link">
+                    <a href="../PROFILE/profile.html">
+                        <img src="../DASHBOARD/profile-user.png" alt="Profile" class="profile-img" height="50" width="50">
+                    </a>
+                </div>
+                <div class="logout-link">
+                    <a href="../LOGIN/index.html" class="logout-btn">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="upcoming-meeting-details">
+            <div class="back-link">
+                <a href="consultations.html"><i class="fas fa-arrow-left"></i> Back to Consultations</a>
+            </div>
+
+            <!-- Meeting Header -->
+            <div class="meeting-header-large">
+                <div class="meeting-title-section">
+                    <h1>Prenatal Nutrition Consultation</h1>
+                    <div class="price-badge">₹999</div>
+                </div>
+                <div class="meeting-meta">
+                    <div class="meta-item">
+                        <i class="far fa-calendar"></i>
+                        <span>May 15, 2024</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="far fa-clock"></i>
+                        <span>10:00 AM - 11:00 AM</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user-md"></i>
+                        <span>Dr. Sarah Johnson</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-users"></i>
+                        <span>Group Session (Max 20 participants)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meeting Overview -->
+            <section class="meeting-overview">
+                <h2>Overview</h2>
+                <div class="overview-content">
+                    <p class="meeting-description">
+                        Join Dr. Sarah Johnson for an informative group session on prenatal nutrition. Learn essential 
+                        dietary guidelines, understand nutritional needs during different stages of pregnancy, and get 
+                        expert answers to your nutrition-related questions.
+                    </p>
+
+                    <div class="key-points">
+                        <h3>What You'll Learn</h3>
+                        <ul>
+                            <li>Essential nutrients for a healthy pregnancy</li>
+                            <li>Meal planning and portion control</li>
+                            <li>Foods to avoid during pregnancy</li>
+                            <li>Managing morning sickness through diet</li>
+                            <li>Healthy weight gain guidelines</li>
+                        </ul>
+                    </div>
+
+                    <div class="session-details">
+                        <h3>Session Details</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Live Q&A session included</li>
+                            <li><i class="fas fa-check"></i> Downloadable nutrition guide</li>
+                            <li><i class="fas fa-check"></i> Meal planning templates</li>
+                            <li><i class="fas fa-check"></i> Recording available for 30 days</li>
+                            <li><i class="fas fa-check"></i> Certificate of completion</li>
+                        </ul>
+                    </div>
+
+                    <div class="instructor-info">
+                        <h3>About the Instructor</h3>
+                        <div class="instructor-content">
+                            <img src="../DASHBOARD/profile-user.png" alt="Dr. Sarah Johnson" class="instructor-image">
+                            <div class="instructor-details">
+                                <h4>Dr. Sarah Johnson</h4>
+                                <p>Certified Nutritionist & Pregnancy Care Specialist</p>
+                                <p>15+ years of experience in prenatal nutrition</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment Section -->
+            <section class="payment-section" id="paymentSection">
+                <div class="payment-card">
+                    <div class="payment-details">
+                        <div class="price-details">
+                            <h3>Session Price</h3>
+                            <div class="price-breakdown">
+                                <div class="price-item">
+                                    <span>Base Price</span>
+                                    <span>₹1499</span>
+                                </div>
+                                <div class="price-item discount">
+                                    <span>Early Bird Discount</span>
+                                    <span>-₹500</span>
+                                </div>
+                                <div class="price-item total">
+                                    <span>Final Price</span>
+                                    <span>₹999</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seats-info">
+                            <i class="fas fa-user-friends"></i>
+                            <span>12 seats left</span>
+                        </div>
+                        <button class="payment-btn-large">
+                            <i class="fas fa-credit-card"></i>
+                            Proceed to Payment
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Hide payment section for free meetings
+        document.addEventListener('DOMContentLoaded', function() {
+            const priceBadge = document.querySelector('.price-badge');
+            const paymentSection = document.getElementById('paymentSection');
+            
+            if (priceBadge && paymentSection) {
+                if (priceBadge.textContent === 'Free') {
+                    paymentSection.style.display = 'none';
+                }
+            }
+        });
+    </script>
+    <script src="consultations.js"></script>
+</body>
+</html> 
