@@ -28,6 +28,15 @@
                         <img src="../DASHBOARD/profile-user.png" alt="Profile" class="profile-img" height="50" width="50">
                     </a>
                 </div>
+                <div class="dark-mode-toggle">
+                    <label class="switch-label">
+                        Dark Mode
+                        <div class="switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
                 <div class="logout-link">
                     <a href="../LOGIN/index.html" class="logout-btn">Logout</a>
                 </div>
@@ -148,6 +157,7 @@
         </div>
     </main>
 
+    <script src="consultations.js"></script>
     <script>
         // Get meeting type from URL parameter
         const urlParams = new URLSearchParams(window.location.search);
