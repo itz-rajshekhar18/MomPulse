@@ -116,11 +116,13 @@ function setupEventListeners() {
     // Cart icon click
     cartIcon.addEventListener('click', () => {
         cartSidebar.classList.add('active');
+        body.classList.add('cart-open');
     });
 
     // Close cart
     document.querySelector('.close-cart').addEventListener('click', () => {
         cartSidebar.classList.remove('active');
+        body.classList.remove('cart-open');
     });
 
     // Category tabs
