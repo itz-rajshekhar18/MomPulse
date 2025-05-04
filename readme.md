@@ -40,3 +40,39 @@ Our goal is to empower mothers with personalized care, emotional support, and me
 
 To make **pregnancy and motherhood safer, happier, and healthier** by offering accessible, expert-backed support to every woman in India.
 
+## AI Assistant Setup
+
+### Dependencies
+
+Make sure you have the following dependencies installed (see `AI_ASSITANT/main.py`):
+
+```
+Flask==2.3.2
+flask-cors==3.0.10
+openai==1.3.7
+python-dotenv==1.0.0
+```
+
+You can install them with:
+
+```
+pip install Flask==2.3.2 flask-cors==3.0.10 openai==1.3.7 python-dotenv==1.0.0
+```
+
+### Running the AI Assistant Backend
+
+1. Set your OpenAI API key in a `.env` file:
+
+```
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+2. Start the Flask server:
+
+```
+cd AI_ASSITANT
+python main.py
+```
+
+The backend will run on `http://localhost:5000` by default.
+
