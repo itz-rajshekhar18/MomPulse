@@ -42,6 +42,26 @@ nav {
     gap: 0;
 }
 
+.profile-logout-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-link {
+    margin-right: 0;
+}
+
+.logout-link {
+    margin-left: 0;
+}
+
+/* Remove any extra margin or padding between profile-link and logout-link */
+.profile-link, .logout-link {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 .logo {
     display: flex;
     flex-direction: column;
