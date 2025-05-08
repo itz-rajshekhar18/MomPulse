@@ -19,14 +19,23 @@
                 </div>
                 <div class="nav-links">
                     <a href="../DASHBOARD/dashboard.html">Dashboard</a>
-                    <a href="#">Articles & Videos</a>
-                    <a href="#">Shop</a>
+                    <a href="../ARTICLES_AND_VIDEOS/articleAndVideos.html">Articles & Videos</a>
+                    <a href="../SHOP/shop.html">Shop</a>
                     <a href="../AI_ASSITANT/aiAssistant.html" class="ai-assistant-link">AI Assistant</a>
                 </div>
                 <div class="profile-link">
                     <a href="../PROFILE/profile.html">
                         <img src="../DASHBOARD/profile-user.png" alt="Profile" class="profile-img" height="50" width="50">
                     </a>
+                </div>
+                <div class="dark-mode-toggle">
+                    <label class="switch-label">
+                        Dark Mode
+                        <div class="switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="slider"></span>
+                        </div>
+                    </label>
                 </div>
                 <div class="logout-link">
                     <a href="../LOGIN/index.html" class="logout-btn">Logout</a>
@@ -54,7 +63,7 @@
                             <p class="time"><i class="far fa-clock"></i> 10:00 AM - 11:00 AM</p>
                             <p class="doctor"><i class="fas fa-user-md"></i> Dr. Sarah Johnson</p>
                             <div class="meeting-actions">
-                                <a href="upcoming-meeting-details.html" class="payment-btn"><i class="fas fa-info-circle"></i> View Details</a>
+                                <a href="upcoming-meeting-details.html?type=paid&doctor=sarah" class="payment-btn"><i class="fas fa-info-circle"></i> View Details</a>
                             </div>
                         </div>
                     </div>
@@ -72,7 +81,7 @@
                             <p class="time"><i class="far fa-clock"></i> 2:00 PM - 3:00 PM</p>
                             <p class="doctor"><i class="fas fa-user-md"></i> Dr. Emily Parker</p>
                             <div class="meeting-actions">
-                                <a href="upcoming-meeting-details.html" class="payment-btn"><i class="fas fa-info-circle"></i> View Details</a>
+                                <a href="upcoming-meeting-details.html?type=free&doctor=emily" class="payment-btn"><i class="fas fa-info-circle"></i> View Details</a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +99,7 @@
                             <p class="time"><i class="far fa-clock"></i> 4:00 PM - 5:30 PM</p>
                             <p class="doctor"><i class="fas fa-user-md"></i> Dr. Robert Wilson</p>
                             <div class="meeting-actions">
-                                <a href="#" class="payment-btn"><i class="fas fa-credit-card"></i> Pay Now</a>
+                                <a href="upcoming-meeting-details.html?type=free&doctor=Robert" class="payment-btn"><i class="fas fa-info-circle"></i> View Details</a>
                             </div>
                         </div>
                     </div>

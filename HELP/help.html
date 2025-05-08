@@ -37,47 +37,45 @@
                 </div>
             </div>
 
-            <div class="contact-form">
+            <form action="https://formsubmit.co/el/vexise" method="POST" class="contact-form" id="helpForm">
                 <h2>Contact Support</h2>
-                <form id="helpForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="category">Help Category</label>
-                        <select id="category" name="category" required>
-                            <option value="">Select a category</option>
-                            <option value="technical">Technical Support</option>
-                            <option value="account">Account Support</option>
-                            <option value="medical">Medical Questions</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="category">Help Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="technical">Technical Support</option>
+                        <option value="account">Account Support</option>
+                        <option value="medical">Medical Questions</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-                    <div class="form-group">
-                        <label for="message">Describe Your Issue</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="message">Describe Your Issue</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="urgency">Urgency Level</label>
-                        <select id="urgency" name="urgency" required>
-                            <option value="low">Low - General Question</option>
-                            <option value="medium">Medium - Need Help Soon</option>
-                            <option value="high">High - Urgent Issue</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="urgency">Urgency Level</label>
+                    <select id="urgency" name="urgency" required>
+                        <option value="low">Low - General Question</option>
+                        <option value="medium">Medium - Need Help Soon</option>
+                        <option value="high">High - Urgent Issue</option>
+                    </select>
+                </div>
 
-                    <button type="submit" class="submit-btn">Submit Request</button>
-                </form>
-            </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
         </section>
 
         <section class="additional-help">
@@ -106,5 +104,6 @@
     </main>
 
     <script src="help.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>

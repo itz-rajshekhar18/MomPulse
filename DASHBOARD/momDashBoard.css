@@ -42,6 +42,26 @@ nav {
     gap: 0;
 }
 
+.profile-logout-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-link {
+    margin-right: 0;
+}
+
+.logout-link {
+    margin-left: 0;
+}
+
+/* Remove any extra margin or padding between profile-link and logout-link */
+.profile-link, .logout-link {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 .logo {
     display: flex;
     flex-direction: column;
@@ -359,6 +379,24 @@ nav {
 /* Health Tracking Section */
 .health-tracking-section {
     margin-bottom: 2rem;
+    position: relative;
+}
+
+.health-tracking-section h2 {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.health-tracking-section h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+    z-index: 3;
 }
 
 .tracking-cards {
@@ -421,6 +459,23 @@ nav {
 /* Emergency Resources */
 .emergency-section {
     margin-bottom: 2rem;
+    position: relative;
+}
+
+.emergency-section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.emergency-section h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+    z-index: 3;
 }
 
 .emergency-cards {
@@ -467,6 +522,23 @@ nav {
 /* Mental Health Resources */
 .mental-health-section {
     margin-bottom: 2rem;
+    position: relative;
+}
+
+.mental-health-section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.mental-health-section h2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+    z-index: 3;
 }
 
 .wellbeing-cards {
